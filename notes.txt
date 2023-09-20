@@ -1,0 +1,75 @@
+16h   end   22h32
+
+Stoped 41'   M2 parte 1 
+
+STARTS 10h 45
+
+Error : 
+    sintaxe
+    eu criei a classe load mas n executei ela dentro do construtor mãe
+
+Error :
+        Favorites.js:16 
+        Favorites.js:48 
+        Favorites.js:54 Uncaught TypeError: Cannot set properties of null (setting 'textContent')
+            at Favorites.js:54:66
+            at Array.forEach (<anonymous>)
+            at FavoritesView.update (Favorites.js:46:22)
+            at new FavoritesView (Favorites.js:18:14)
+            at main.js:3:1
+            
+Error : 
+        row.querySelector('.user .Repositories').textContent = user.public_repos;
+        row.querySelector('.user .Followers').textContent = user.followers;
+        row.querySelector('.user .remove').onclick = () => {console.log(`apagar :${row}:`)};
+
+        have to be just       .Followers'
+
+    filter: brightness
+
+    border-collapse: collapse;   tirar os espaços do cabeçalho da tabela 
+
+    odd  todos os filhos que são impares 
+    even todos os filhos que são par 
+
+    table tr:nth-child(even){
+    background-color: hsl(0, 0%, 93%);
+    }
+
+    table tr:nth-child(odd){
+    background-color: hsl(0, 0%, 87%);
+    }
+
+    box-shadow: postionX    positionY   seuSIZEblur()  SEUspread   SUAcor;
+
+    box-shadow: 0 0 .4rem .2rem
+
+
+
+    Arquivos js 
+    Uma vai construir a tabela 
+
+    Outra vai fazer a lógica dos dados a serem apresentados
+        E unir as duas com a ideia de herança 
+
+
+
+    CreateRow(){
+                const tr = document.createElement('tr')
+
+        const content = `<td class="Users">
+            <img src="https://github.com/ThiagoMassenoMaciel.png" alt="Image mde perfil do respectivo usuário que ja foi adicionado nesta Pagina de favoritos">
+            <a href="https://github.com/ThiagoMassenoMaciel">
+                <p>ThiagoMassenoMaciel</p>
+                <span>Thiago Masseno Maciel</span>
+            </a>
+            </td>
+            <td class="Repositories">64</td>
+            <td class="Followers">22</td>
+            <td>
+            <button class="remove" >&times;</button>
+            </td>`
+
+        tr.innerHTML = content 
+    }
+
